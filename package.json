@@ -20,7 +20,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^5.3.4",
     "rxfire": "^4.0.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^6.6.7"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",
