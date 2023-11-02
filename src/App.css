@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 37, 37);
+}
+
+.board-container {
+    height: 600px;
+    width: 600px;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 12.5%;
+    height: 12.5%;
+}
+
+.promote-square {
+    width: 50%;
+    height: 50%;
+}
+
+.square-black {
+    background-color: rgb(181, 153, 99);
+}
+
+.square-white {
+    background-color: rgb(240, 217, 181);
+}
+
+.board-square {
+    width: 100%;
+    height: 100%; 
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/*pieces*/
+
+.piece-container {
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piece {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+
+/*game over text and stuff*/
+.vertical-text {
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    font-family: sans-serif;
+    padding: 10px;
+    color: white;
+}
+
+.vertical-text button {
+    margin-top: 20px;
+    cursor: pointer;
+    background: rgb(63, 63, 63);
+    border: 2px solid white;
+    border-radius: 10px; 
+}
+
+
+/*bulma stuff*/
+
+/* .user-form {
+    margin-top: 30px !important;
+    max-width: 800px;
+    margin: auto;
+}
+
+.home {
+    min-height: 100vh;   
+}
+
+.card-content {
+    border-radius: none;
+}
+
+.card-footer-item {
+    background-color: white;
+}
+
+.share-game {
+    position: absolute;
+    width: 500px;
+    bottom: 0;
+    left: 0;
+}
+ */
