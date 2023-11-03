@@ -7,4 +7,3 @@ Multiplayer Chess Game built with React, Firebase, and Tailwind CSS, utilizing c
 ```
 npm install
 npm run dev
-
