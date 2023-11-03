@@ -49,7 +49,7 @@ function GameApp() {
   if (initResult === 'notfound') {
     return 'Game Not Found';
   }
-  if (initResult === 'initruder') {
+  if (initResult === 'intruder') {
     return 'The game is already full';
   }
 

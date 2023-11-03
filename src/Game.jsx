@@ -1,5 +1,5 @@
 import { Chess } from 'chess.js'
-import {BehaviorSubject} from 'rxjs'
+import { BehaviorSubject } from 'rxjs'
 import { map } from 'rxjs/operators'
 import { auth } from './firebase'
 import { fromDocRef } from 'rxfire/firestore'
@@ -32,9 +32,9 @@ export async function initGame(gameRefFb) {
         } else if (!initialGame.members.map(m => m.uid).includes(currentUser.uid)) {
             return 'intruder'
         }
-        chess.reset()           //reset the game
+        chess.reset()
 
-        gameSubject = fromDocRef(gameRefFb).pipe(                   //rxfire stuff
+        gameSubject = fromDocRef(gameRefFb).pipe(
             map(gameDoc =>{
                 const game = gameDoc.data()
                 const { pendingPromotion, gameData, ...restOfGame } = game
@@ -61,7 +61,7 @@ export async function initGame(gameRefFb) {
 
     } else {
         gameRef = null
-        gameSubject = new BehaviorSubject()                 //behaviorsubject is rxjs stuff
+        gameSubject = new BehaviorSubject()
         const savedGame = localStorage.getItem('savedGame')
         if (savedGame) {
             chess.load(savedGame)
@@ -125,7 +125,7 @@ async function updateGame(pendingPromotion, reset) {
     } else {
         const newGame = {
             board: chess.board(),
-            pendingPromotion,               //pawn promotion
+            pendingPromotion,
             isGameOver,
             position: chess.turn(),
             result: isGameOver ? getGameResult() : null                

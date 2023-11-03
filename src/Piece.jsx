@@ -13,9 +13,7 @@ export default function Piece({ piece: { type, color }, position }) {
     })
 
     const pieceImg = `/assets/${type}_${color}.png`
-    //get image from folder end
 
-    //drag
     return (
         <>
             <DragPreviewImage connect = {preview} src = {pieceImg}/>
